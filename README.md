@@ -6,12 +6,16 @@ Template Packer for generate custom Centos7 with Hardening image to use in Azure
  - **marketplace**: Generate custom VHD based in centos7 of the azure-marketplace  => create image (genaralized)
 
 ## How to Use
+Step1: Clone the image
+Step2: change the credentials in the json file and the resource names
+
  - **manual-vhd**: 
    - cd <path-to-clone>
    - $ /usr/local/packer build -var 'version=1.0' centos.json
    - $ . scripts/azure/vhd/deploy-vhd-azure.sh #to upload and create disk and VM Temp
    - $ . scripts/azure/vhd/make-image.sh # Get VM temp and convert in valid IMAGE type
-- **marketplace**
+
+ - **marketplace**
   - cd <path-to-clone>
   - $ /usr/local/packer build -var 'version=1.0' centos.json
 
